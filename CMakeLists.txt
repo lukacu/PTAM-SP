@@ -4,10 +4,10 @@ project(PTAM-SP)
 set(CMAKE_CXX_STANDARD 17)
 
 find_package( OpenCV 4 REQUIRED )
-find_package( DBoW2 QUIET PATHS /home/luka/Sources/DBoW2/install)
+find_package( DBoW2 REQUIRED )
 find_package( OpenGL REQUIRED )
 
-include_directories(include include/PTAM_lib include/PTAM_calib)
+include_directories(include include/PTAM_lib include/PTAM_calib libraries/libcvd/include libraries/toon/include libraries/cereal/include libraries/gvars3/include)
 
 set(PTAM_SP_LIB_SRC
         ${CMAKE_SOURCE_DIR}/src/PTAM-SP-lib/ATANCamera.cpp

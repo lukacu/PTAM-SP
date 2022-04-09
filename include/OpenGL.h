@@ -8,6 +8,7 @@
 #endif
 
 #ifdef _OSX
+#define GL_SILENCE_DEPRECATION
 #include <OpenGL/gl.h>
 #include <OpenGL/glext.h>
 #endif
@@ -16,6 +17,6 @@
 #define WIN32_LEAN_AND_MEAN
 #include <GL/glew.h>
 #endif
-
+#define GL_SILENCE_DEPRECATION
 #include <cvd/gl_helpers.h>
 #endif

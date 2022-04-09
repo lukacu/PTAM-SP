@@ -218,7 +218,7 @@ std::pair<Vector<6>, Vector<6> > GLWindow2::GetMousePoseUpdate() {
 
 #ifndef WIN32
 
-#include <X11/keysym.h>
+#include "keysym.h"
 
 void GLWindow2::on_key_down(GLWindow &, int k) {
     std::string s;

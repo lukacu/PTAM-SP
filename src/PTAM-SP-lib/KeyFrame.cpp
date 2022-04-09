@@ -7,9 +7,12 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/features2d.hpp>
 #include <opencv2/highgui.hpp>
-#include <opencv2/xfeatures2d/nonfree.hpp>
+//#include <opencv2/xfeatures2d/nonfree.hpp>
 #include "MapPoint.h"
 #include "LevelHelpers.h"
+#include <algorithm>
+#include <random>
+
 
 using namespace CVD;
 using namespace GVars3;
@@ -90,7 +93,8 @@ void KeyFrame::MakeKeyFrame_Rest() {
                 lev.vCandidates.push_back(c);
             }
         }
-        random_shuffle(lev.vCandidates.begin(), lev.vCandidates.end());
+        std::mt19937 g;
+        std::shuffle(lev.vCandidates.begin(), lev.vCandidates.end(), g);
     };
     state = REST;
 }
