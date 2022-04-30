@@ -21,18 +21,17 @@ can then be used to run **PTAM-SP** on video recordings.
 
 ### Building
 Dependencies are the same as for PTAM:
-* TooN
-* libCVD
-* Gvars3
+* TooN  (automatically downloaded)
+* libCVD  (automatically downloaded)
+* Gvars3  (patched version bundled)
 
 Useful guide: http://hustcalm.me/blog/2013/09/27/ptam-compilation-on-linux-howto/
 
 PTAM-SP also uses:
-* OpenCV
-* DBoW2 - https://github.com/dorian3d/DBoW2
-* nanoflann - https://github.com/jlblancoc/nanoflann
-* cereal - https://github.com/USCiLab/cereal
-
+* OpenCV (requires manual install)
+* DBoW2 - https://github.com/dorian3d/DBoW2 (automatically downloaded)
+* nanoflann - https://github.com/jlblancoc/nanoflann (automatically downloaded)
+* cereal - https://github.com/USCiLab/cereal (automatically downloaded)
 
 ### Project Structure
 There is several subprojects (executables):
